@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-09 11:39:58
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-10 10:11:47
+ * @LastEditTime: 2020-03-10 10:32:26
  */
 /*const router = require('koa-router')()
 
@@ -37,7 +37,7 @@ import userModel from '../models/user'
 export default app => {
 
 /*----------------------admin-------------------------------*/
-    // 用户请求
+    // 用户请
     router.get('/', async (ctx, next) => {
       console.log('----------------用户信息-----------------------');
       // let _id = ctx.request.query._id;
