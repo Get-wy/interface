@@ -21,4 +21,16 @@
 3. npm install
 4. npm run dev
 
-
+## 接口样式
+{
+    "code": 1,
+    "data": {
+        "message": "登录成功",
+        "data": {
+            "_id": "5e66f44184d497fcc3b18594",
+            "name": "123",
+            "__v": 0
+        }
+    },
+    "msg": "success"
+}
