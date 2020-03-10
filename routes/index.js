@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-09 11:39:58
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-10 10:32:26
+ * @LastEditTime: 2020-03-10 16:35:20
  */
 /*const router = require('koa-router')()
 
@@ -37,18 +37,10 @@ import userModel from '../models/user'
 export default app => {
 
 /*----------------------admin-------------------------------*/
-    // 用户请
-    router.get('/', async (ctx, next) => {
-      console.log('----------------用户信息-----------------------');
-      // let _id = ctx.request.query._id;
-      try {
-        let data = await ctx.findOne(userModel, {name: 123})
-        console.log(data)
-        ctx.send({message: '登录成功',data:data});
-      } catch (e){
-        ctx.sendError(e)
-      }
-    })
+    // 查询用户是否存在 get /get?name:xxx
+    router.get('/get', app.admin.user.getUser)
+
+    
 
     app.use(router.routes()).use(router.allowedMethods());
 }

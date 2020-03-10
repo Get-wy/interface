@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-10 09:43:21
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-10 10:09:22
+ * @LastEditTime: 2020-03-10 16:32:05
  */
 import path from 'path'
 import bodyParser from 'koa-bodyparser'
@@ -47,19 +47,15 @@ export default app => {
     //app.use(staticFiles(path.resolve(__dirname, '../../../public')));
 
     // 规则中间件
-    // Rule({
-    //     app,
-    //     rules: [
-    //         {
-    //             path: path.join(__dirname, '../controller/admin'),
-    //             name: 'admin'
-    //         },
-    //         {
-    //             path: path.join(__dirname, '../controller/client'),
-    //             name: 'client'
-    //         }
-    //     ]
-    // })
+    Rule({
+        app,
+        rules: [
+            {
+                path: path.join(__dirname, '../controller/admin'),
+                name: 'admin'
+            }
+        ]
+    })
 
     // 增加错误的监听处理
     app.on("error", (err, ctx) => {
