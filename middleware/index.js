@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-10 09:43:21
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-10 16:32:05
+ * @LastEditTime: 2020-03-11 10:54:05
  */
 import path from 'path'
 import bodyParser from 'koa-bodyparser'
@@ -41,7 +41,7 @@ export default app => {
     //app.use(Auth())
 
     //post请求中间件
-    //app.use(bodyParser())
+    app.use(bodyParser())
     
     //静态文件中间件
     //app.use(staticFiles(path.resolve(__dirname, '../../../public')));
