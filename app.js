@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-09 11:39:58
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-10 10:10:57
+ * @LastEditTime: 2020-03-13 10:35:56
  */
 import Koa from 'koa'
 import ip from 'ip'
@@ -37,7 +37,7 @@ app.use(async (ctx, next) => {
 middleware(app)
 router(app)
 app.listen(conf.port, '0.0.0.0', () => {
-    console.log(`server is running at http://${ip.address()}:${conf.port}`)
+  console.log(`server is running at http://${ip.address()}:${conf.port}`)
 })
 
 module.exports = app
