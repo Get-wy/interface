@@ -2,7 +2,7 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-09 11:39:58
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-13 10:36:13
+ * @LastEditTime: 2020-04-28 09:57:52
  */
 /*const router = require('koa-router')()
 
@@ -36,6 +36,7 @@ export default app => {
 /*----------------------admin-------------------------------*/
   // 查询用户是否存在 get /get?name:xxx
   router.get('/get', app.admin.user.getUser)
+  //router.get('/api/user/login', app.admin.user.getUser)
   // 添加用户psot /add {name:xxx,pwd:xxx}
   router.post('/add', app.admin.user.addUser)
   // 修改用户psot /update {name:xxx,pwd:xxx}

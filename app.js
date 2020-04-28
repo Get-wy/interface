@@ -2,10 +2,14 @@
  * @Author: solomonyuu@gmail.com
  * @Date: 2020-03-09 11:39:58
  * @LastEditors: solomonyuu@gmail.com
- * @LastEditTime: 2020-03-13 10:35:56
+ * @LastEditTime: 2020-04-28 10:25:29
  */
 import Koa from 'koa'
 import ip from 'ip'
+
+// 在node 服务文件 app.js 中引入 koa-connect-history-api-fallback
+// 注意： 该引用须在 const serve = require('koa-static'); 前
+const history = require('koa-connect-history-api-fallback');
 
 import router from './routes'
 import conf from './config'
@@ -13,17 +17,18 @@ import middleware from './middleware'
 
 import './mogodb'
 
-const app = new Koa()
-//const cors = require('koa2-cors');
+// 插件默认会将所有的请求都指向到index.html，这样可能就会导致项目内其他路由也被指向到index.html，导致接口报错。
+// 解决方法：使用koa2-connect-history-api-fallback npm地址 该插件增加了请求白名单。
+const { historyApiFallback } = require('koa2-connect-history-api-fallback');
 
-// 具体参数我们在后面进行解释
-// app.use(cors({
-//     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
-//     maxAge: 5,
-//     credentials: true,
-//     allowMethods: ['GET', 'POST', 'DELETE'],
-//     allowHeaders: ['Content-Type', 'Authorization', 'Accept'],
-// }))
+
+const app = new Koa()
+
+app.use(history());
+
+app.use(require('koa-static')(__dirname + '/public/dist'))
+
+app.use(historyApiFallback({ whiteList: ['/api'] }));
 
 // 捕获每一步异常
 app.use(async (ctx, next) => {

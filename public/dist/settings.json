@@ -1,0 +1,295 @@
+{
+  "stageStatusDesignprinciple": [
+    {
+      "value": "1",
+      "label": "未录入"
+    },
+    {
+      "value": "2",
+      "label": "已录入"
+    },
+    {
+      "value": "3",
+      "label": "已提交"
+    },
+    {
+      "value": "4",
+      "label": "已修改"
+    },
+    {
+      "value": "5",
+      "label": "已发放"
+    }
+  ],
+  "userPositionList": [
+  {
+    "value": "全部人员",
+    "label": "全部人员"
+  }, {
+    "value": "管理员",
+    "label": "管理员"
+  }, {
+    "value": "院长",
+    "label": "院长"
+  }, {
+    "value": "设计人员",
+    "label": "设计人员"
+  }, {
+    "value": "负责所长",
+    "label": "负责所长"
+  }, {
+    "value": "所长",
+    "label": "所长"
+  }, {
+    "value": "设计负责人",
+    "label": "设计负责人"
+  }, {
+    "value": "专业负责人",
+    "label": "专业负责人"
+  }],
+  "placeList": [
+    {
+      "value": "1",
+      "label": "环境"
+    }, {
+      "value": "2",
+      "label": "结构"
+    }, {
+      "value": "3",
+      "label": "电仪"
+    }
+  ],
+  "environmentOffice": [
+    {
+      "value": "1",
+      "label": "环卫"
+    }, {
+      "value": "2",
+      "label": "排水"
+    }, {
+      "value": "3",
+      "label": "除臭"
+    }
+  ],
+  "structure": [
+    {
+      "value": "1",
+      "label": "建筑"
+    }, {
+      "value": "2",
+      "label": "结构"
+    }, {
+      "value": "3",
+      "label": "水工"
+    }
+  ],
+  "electricInstrument": [
+    {
+      "value": "1",
+      "label": "电气"
+    }, {
+      "value": "2",
+      "label": "仪表"
+    }
+  ],
+  "projectCategory": [
+    {
+      "value": "1",
+      "label": "填埋类(环境主体)"
+    },
+    {
+      "value": "2",
+      "label": "填埋类(结构主体)"
+    },
+    {
+      "value": "3",
+      "label": "中转类"
+    },
+    {
+      "value": "4",
+      "label": "综合类"
+    },
+    {
+      "value": "5",
+      "label": "焚烧类"
+    },
+    {
+      "value": "6",
+      "label": "污水处理"
+    },
+    {
+      "value": "7",
+      "label": "管网"
+    }
+  ],
+  "designPhase": [
+    {
+      "value": "1",
+      "label": "工可(可研)"
+    }, {
+      "value": "2",
+      "label": "初设"
+    }, {
+      "value": "3",
+      "label": "施工图"
+    }, {
+      "value": "4",
+      "label": "项建书(投标、方案)"
+    }, {
+      "value": "5",
+      "label": "施工配合"
+    }, {
+      "value": "6",
+      "label": "项目专篇"
+    }, {
+      "value": "7",
+      "label": "其它"
+    }
+  ],
+  "tableData": [
+  {
+    "place": "环境",
+    "proportion": "",
+    "coefficient": 1,
+    "upperLimit": 100,
+    "outputValue": 0,
+    "forbidEdit": true,
+    "showEditButton": true
+  }, {
+    "place": "结构",
+    "proportion": "",
+    "coefficient": 1,
+    "upperLimit": 100,
+    "outputValue": 0,
+    "forbidEdit": true,
+    "showEditButton": true
+  }, {
+    "place": "电仪",
+    "proportion": "",
+    "coefficient": 1,
+    "upperLimit": 100,
+    "outputValue": 0,
+    "forbidEdit": true,
+    "showEditButton": true
+  }],
+  "tableData2": [
+    {
+      "place": "环境",
+      "specialty": "环卫",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "环境",
+      "specialty": "排水",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "环境",
+      "specialty": "除臭",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "结构",
+      "specialty": "建筑",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "结构",
+      "specialty": "结构",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "结构",
+      "specialty": "水工",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "电仪",
+      "specialty": "电气",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }, {
+      "place": "电仪",
+      "specialty": "仪表",
+      "proportion": "",
+      "outputValue": 0,
+      "principal": ""
+    }
+  ],
+  "columns": [
+    {
+      "title": "所",
+      "key": "place"
+    },
+    {
+      "title": "分配比例",
+      "key": "proportion",
+      "component": {
+        "name": "el-input",
+        "placeholder": "百分比",
+        "suffix-icon": "icon iconfont icon-baifenbi"
+      }
+    },
+    {
+      "title": "调整系数",
+      "key": "coefficient",
+      "component": {
+        "name": "el-input"
+      }
+    },
+    {
+      "title": "所进度上限",
+      "key": "upperLimit",
+      "component": {
+        "name": "el-input",
+        "placeholder": "百分比",
+        "suffix-icon": "icon iconfont icon-baifenbi"
+      }
+    },
+    {
+      "title": "所计算产值(元)",
+      "key": "outputValue"
+    }
+  ],
+  "columns2": [
+    {
+      "title": "所",
+      "key": "place"
+    },
+    {
+      "title": "专业",
+      "key": "specialty"
+    },
+    {
+      "title": "分配比例",
+      "key": "proportion",
+      "component": {
+        "name": "el-input",
+        "placeholder": "百分比",
+        "suffix-icon": "icon iconfont icon-baifenbi"
+      }
+    },
+    {
+      "title": "专业产值(元)",
+      "key": "outputValue"
+    },
+    {
+      "title": "专业负责人",
+      "key": "principal",
+      "component": {
+        "name": "MyTag",
+        "props": {
+          "myProps": "我是通过props传过来的数据！"
+        }
+      }
+    }
+  ],
+  "text": "### 版本更新记录\n\n ### v1.0.5 (2020-4-3)\n\n1. `A` 新增 项目没有进行过产值分配和季度信息的时候管理员可以进行删除\n\n### v1.0.4 (2020-3-27)\n\n1. `A` 新增 新增项目阶段，可研=工可、投标、方案=项建书 \n1. `U` 优化 修改顶部筛选框样式，兼容小屏幕 \n1. `U` 优化 管理员的项目管理页面分页修改 \n1. `U` 优化 所长的项目管理页面性能优化 \n1. `U` 优化 通用产值查询项目表格 \n1. `U` 优化 兼容ie10+ \n\n### v1.0.3 (2019-12-5)\n\n1. `U` 更新 负责所长-人员产值页显示信息BUG修复 \n2. `U` 更新 取消负责所长修改专业分配比例功能\n2. `U` 更新 操作记录的信息不正确BUG修复\n2. `U` 更新 管理员操作记录中缺少季度相关操作的信息\n\n### v1.0.2 (2019-11-29)\n\n1. `A` 新增 系统开放时间限制 \n2.  `U` 更新 “关于我们”页logo、网址加链接等\n3.  `U` 更新 管理员重置密码优化\n4.  `U` 更新 帮助文档新增普通人员\n5. `U` 更新  调整表格样式 \n\n### v1.0.1 (2019-11-20)\n\n1. `A` 新增 设计人员用户界面\n2. `A` 新增 专业负责人的产值分配页导出功能\n3. `A` 新增 管理员随时修改项目设计负责人功能\n4. `A` 新增 管理员的项目新增页增加其它设计阶段\n5. `A` 新增 管理员项目新增页默认填充所、专业之间比例 \n6. `U` 更新 取消负责所长修改专业分配比例权限\n\n### v1.0.0 (2019-11-12)\n1. ` A ` 新增 产值奖金管理系统上线了！"
+}
