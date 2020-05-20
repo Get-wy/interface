@@ -23,5 +23,9 @@ export default {
 		pwd: 123456,
 		address: 'localhost:27017',
 		db: 'admin'
+	},
+	redis: {
+		port: 6379,
+		address: 'localhost:'
 	}
 }
